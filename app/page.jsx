@@ -112,15 +112,15 @@ export default function Home() {
           <polyline points="9 22 9 12 15 12 15 22" />
         </svg>
       ),
-      title: 'Interior Renovation',
-      desc: 'Complete interior transformation — flooring, ceilings, partitions, painting, and fit-outs tailored to your vision.',
-      items: [
-        'False Ceiling & Partitions',
-        'Flooring & Tiling',
-        'Interior Painting',
-        'Kitchen Fit-Out',
-        'Bathroom Renovation',
-        'Office Interior',
+      title: <a href="https://allcaretechnicalservices.ae/services/interior-renovation">Interior Renovation</a>,
+desc: 'Complete interior transformation — flooring, ceilings, partitions, painting, and fit-outs tailored to your vision.',
+items: [
+  'False Ceiling & Partitions',
+  'Flooring & Tiling',
+  'Interior Painting',
+  'Kitchen Fit-Out',
+  'Bathroom Renovation',
+  'Office Interior',
       ],
     },
     {
