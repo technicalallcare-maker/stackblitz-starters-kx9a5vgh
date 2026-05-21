@@ -1047,7 +1047,7 @@ export default function Home() {
                     <polyline points="12 5 19 12 12 19" />
                   </svg>
                 </a>
-                <a href="#services" className="btn-slide-secondary">
+                <a href="https://allcaretechnicalservices.ae/services" className="btn-slide-secondary">
                   Our Services
                 </a>
               </div>
