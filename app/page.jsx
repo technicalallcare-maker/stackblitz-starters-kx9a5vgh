@@ -967,7 +967,7 @@ export default function Home() {
                 <div className="mega-grid">
                   {allServices.map((s) => (
                     <a
-                      href="#services"
+                      href="https://allcaretechnicalservices.ae/services"
                       className="mega-item"
                       key={s}
                       onClick={() => setServicesOpen(false)}
@@ -1007,7 +1007,7 @@ export default function Home() {
         <div className={`mobile-nav ${menuOpen ? 'open' : ''}`}>
           <a href="/">Home</a>
           {allServices.map((s) => (
-            <a href="#services" key={s} onClick={() => setMenuOpen(false)}>
+            <a href="https://allcaretechnicalservices.ae/services" key={s} onClick={() => setMenuOpen(false)}>
               {s}
             </a>
           ))}
@@ -1664,7 +1664,7 @@ export default function Home() {
             <ul>
               {allServices.slice(0, 6).map((s) => (
                 <li key={s}>
-                  <a href="#services">{s}</a>
+                  <a href="https://allcaretechnicalservices.ae/services">{s}</a>
                 </li>
               ))}
             </ul>
@@ -1674,7 +1674,7 @@ export default function Home() {
             <ul>
               {allServices.slice(6, 12).map((s) => (
                 <li key={s}>
-                  <a href="#services">{s}</a>
+                  <a href="https://allcaretechnicalservices.ae/services">{s}</a>
                 </li>
               ))}
             </ul>
