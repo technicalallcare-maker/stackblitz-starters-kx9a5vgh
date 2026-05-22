@@ -350,7 +350,7 @@ export default function AboutPage() {
         .testi-stars { display: flex; gap: 3px; }
         .testi-star { color: #f5c518; font-size: 16px; }
         .testi-text { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.8; font-style: italic; flex: 1; }
-        .testi-text::before { content: '\201C'; font-size: 28px; color: var(--green-light); line-height: 0; vertical-align: -10px; margin-right: 4px; }
+       .testi-text::before { content: '"'; font-size: 28px; color: var(--green-light); line-height: 0; vertical-align: -10px; margin-right: 4px; }
         .testi-author { display: flex; align-items: center; gap: 12px; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
         .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: rgba(155,193,76,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #c8e88a; font-size: 18px; font-weight: 700; font-family: 'Cormorant Garamond', serif; }
         .testi-name { font-size: 14px; font-weight: 600; color: #fff; }
