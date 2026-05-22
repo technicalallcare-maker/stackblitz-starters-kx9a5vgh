@@ -1,23 +1,6 @@
 'use client';
 import { useState } from 'react';
 
-function FaqItem({ q, a }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="faq-item">
-      <button className="faq-q" onClick={() => setOpen(v => !v)}>
-        {q}
-        <span className={`faq-icon ${open ? 'open' : ''}`}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-          </svg>
-        </span>
-      </button>
-      {open && <div className="faq-a">{a}</div>}
-    </div>
-  );
-}
-
 export default function AboutPage() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -36,32 +19,32 @@ export default function AboutPage() {
     { name: 'Ravi Kumar', role: 'Head of Interior Design', desc: '12+ years designing luxury interiors across Dubai. Transforms client visions into stunning spaces.', img: '/team3.jpg' },
     { name: 'Khalid Al Farsi', role: 'Technical Manager', desc: 'Certified engineer overseeing all MEP, electrical, and civil works to the highest standards.', img: '/team4.jpg' },
     { name: 'Sanjay Patel', role: 'Pool & Landscape Lead', desc: '10+ years creating stunning pools and landscapes across Dubai villas and communities.', img: '/team5.jpg' },
-    { name: 'Omar Yasin', role: 'Client Relations Manager', desc: 'Your dedicated point of contact — ensuring communication is always clear and smooth.', img: '/team6.jpg' },
+    { name: 'Omar Yasin', role: 'Client Relations Manager', desc: 'Your dedicated point of contact ensuring communication is always clear and smooth.', img: '/team6.jpg' },
   ];
 
   const milestones = [
     { year: '2014', title: 'Company Founded', desc: 'All Care Technical Services was established in Dubai with a team of 5 dedicated professionals.' },
     { year: '2016', title: 'First 100 Projects', desc: 'Reached 100 completed projects milestone, expanding our services to include pool construction.' },
-    { year: '2018', title: 'Expanded Services', desc: 'Launched our landscape, aluminum, and MEP divisions — becoming a true one-stop renovation company.' },
-    { year: '2020', title: 'Team of 50+', desc: 'Grew to 50+ skilled professionals across all trades. Opened our dedicated plant nursery division.' },
+    { year: '2018', title: 'Expanded Services', desc: 'Launched landscape, aluminum, and MEP divisions — becoming a true one-stop renovation company.' },
+    { year: '2020', title: 'Team of 50+', desc: 'Grew to 50+ skilled professionals. Opened our dedicated plant nursery division.' },
     { year: '2022', title: '300+ Projects', desc: 'Surpassed 300 completed projects. Expanded into large-scale commercial and villa community works.' },
     { year: '2024', title: '500+ Projects', desc: 'Today we have completed 500+ projects across Dubai with a 4.9-star client satisfaction rating.' },
+  ];
+
+  const testimonials = [
+    { name: 'Ahmad Al Mansouri', role: 'Villa Owner, Palm Jumeirah', rating: 5, text: 'All Care transformed our entire villa — interior, exterior, and pool area. The quality of work was exceptional and they delivered on time. I highly recommend them to anyone in Dubai looking for a reliable renovation company.' },
+    { name: 'Sarah Johnson', role: 'Property Developer, Business Bay', rating: 5, text: 'We have used All Care for multiple commercial fit-outs across Dubai. Their professionalism, attention to detail, and transparent pricing make them our go-to renovation partner. Outstanding team and results.' },
+    { name: 'Khalid Al Farhan', role: 'Homeowner, Arabian Ranches', rating: 5, text: 'The landscaping and pool project they completed at our villa exceeded all expectations. Beautiful work, skilled team, and great communication throughout. Will definitely use them again for our next project.' },
+    { name: 'Priya Sharma', role: 'Restaurant Owner, JBR', rating: 5, text: 'All Care did a complete fit-out of our restaurant and the result was stunning. They understood our vision perfectly and executed everything to the highest standard. Our customers constantly compliment the interior.' },
+    { name: 'Mohammed Al Rasheed', role: 'Real Estate Manager, DIFC', rating: 5, text: 'Reliable, skilled, and professional. All Care handled the renovation of 12 apartments for us — all delivered on schedule and to a very high standard. Their turnkey approach made the entire process stress-free.' },
+    { name: 'Emma Williams', role: 'Homeowner, Jumeirah', rating: 5, text: 'From the initial consultation to the final handover, the experience was smooth and professional. Our bathroom and kitchen renovation looks absolutely beautiful. Thank you All Care for the wonderful work.' },
   ];
 
   const certifications = [
     { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>, title: 'Dubai Municipality Licensed', desc: 'Fully registered and approved contractor with Dubai Municipality.' },
     { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>, title: 'Fully Insured', desc: 'Comprehensive public liability insurance covering all our projects and operations.' },
-    { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>, title: 'Trade License', desc: 'Valid UAE trade license covering all renovation, construction, and technical services.' },
+    { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>, title: 'Valid Trade License', desc: 'Valid UAE trade license covering all renovation, construction, and technical services.' },
     { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>, title: 'Quality Certified', desc: 'ISO-aligned quality management systems ensuring consistent excellence across all projects.' },
-  ];
-
-  const faqs = [
-    { q: 'Where is All Care Technical Services based?', a: 'We are based in Dubai, UAE and serve clients across all areas including Downtown Dubai, Dubai Marina, Palm Jumeirah, Arabian Ranches, Jumeirah, Business Bay, and surrounding areas.' },
-    { q: 'How many years has All Care been operating?', a: 'All Care Technical Services was founded in 2014, giving us over 10 years of experience in Dubai renovation and technical services.' },
-    { q: 'What types of projects do you handle?', a: 'We handle everything from single-room renovations to full villa fit-outs, commercial office interiors, pool construction, landscaping, and all technical services. No project is too big or too small.' },
-    { q: 'Are you licensed to operate in Dubai?', a: 'Yes, we are fully licensed with Dubai Municipality and hold all necessary trade licenses and certifications to operate legally across the UAE.' },
-    { q: 'Do you work with both residential and commercial clients?', a: 'Absolutely. We serve homeowners, property developers, real estate companies, hotels, and commercial businesses. Our team is experienced in both residential and commercial environments.' },
-    { q: 'How can I contact All Care Technical Services?', a: 'You can reach us by phone or WhatsApp on +971 55 974 7416, by email at Info@allcaretechnicalservices.ae, or by filling in our contact form on the website.' },
   ];
 
   return (
@@ -105,32 +88,84 @@ export default function AboutPage() {
         .mobile-nav a:hover { color: var(--green-dark); }
         .mob-cta { margin-top: 12px; background: var(--green-light); color: #fff !important; text-align: center; padding: 13px; border-radius: 9px; font-weight: 600; border-bottom: none !important; }
 
-        /* HERO */
-        .hero { position: relative; height: clamp(460px, 65vh, 720px); overflow: hidden; display: flex; align-items: flex-end; }
-        .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,20,9,0.92) 0%, rgba(15,20,9,0.45) 50%, rgba(15,20,9,0.15) 100%); }
-        .hero-overlay2 { position: absolute; inset: 0; background: linear-gradient(to right, rgba(61,92,16,0.55) 0%, transparent 65%); }
-        .hero-content { position: relative; padding: clamp(2rem,5vw,4rem) clamp(1.5rem,6vw,6rem); max-width: 780px; }
+        /* ── HERO FIX ── */
+        .hero {
+          position: relative;
+          width: 100%;
+          min-height: clamp(500px, 75vh, 800px);
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+        .hero-img {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+        .hero-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to top,
+            rgba(10,16,6,0.96) 0%,
+            rgba(10,16,6,0.65) 40%,
+            rgba(10,16,6,0.2) 100%
+          );
+        }
+        .hero-overlay2 {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to right, rgba(61,92,16,0.45) 0%, transparent 60%);
+        }
+        .hero-content {
+          position: relative;
+          z-index: 2;
+          padding: clamp(2.5rem,5vw,4rem) clamp(1.5rem,6vw,6rem);
+          max-width: 820px;
+          /* push content above the stats bar */
+          padding-bottom: clamp(2rem,4vw,3.5rem);
+        }
         .breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 1.25rem; flex-wrap: wrap; }
         .breadcrumb a { color: rgba(255,255,255,0.55); font-size: 13px; text-decoration: none; transition: color 0.2s; }
         .breadcrumb a:hover { color: #c8e88a; }
         .breadcrumb span { color: rgba(255,255,255,0.35); font-size: 12px; }
         .breadcrumb-active { color: #c8e88a; font-size: 13px; font-weight: 500; }
         .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(155,193,76,0.18); border: 1px solid rgba(155,193,76,0.4); color: #c8e88a; font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 100px; margin-bottom: 1.25rem; letter-spacing: 0.06em; text-transform: uppercase; }
-        .hero-dot { width: 6px; height: 6px; background: var(--green-light); border-radius: 50%; animation: pulse 2s infinite; }
+        .hero-dot { width: 6px; height: 6px; background: var(--green-light); border-radius: 50%; animation: pulse 2s infinite; flex-shrink: 0; }
         @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
-        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.6rem,6vw,4.8rem); font-weight: 700; color: #fff; line-height: 1.05; margin-bottom: 1.25rem; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem,5.5vw,4.5rem); font-weight: 700; color: #fff; line-height: 1.08; margin-bottom: 1.25rem; }
         .hero h1 em { color: #c8e88a; font-style: normal; }
-        .hero p { font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; max-width: 580px; }
+        .hero p { font-size: 15.5px; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; max-width: 560px; }
         .hero-btns { display: flex; gap: 0.85rem; flex-wrap: wrap; }
         .btn-green { background: var(--green-light); color: #fff; padding: 13px 26px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s, transform 0.15s; }
         .btn-green:hover { background: var(--green-dark); transform: translateY(-2px); }
         .btn-outline-w { background: rgba(255,255,255,0.1); color: #fff; padding: 13px 22px; border-radius: 10px; font-size: 14px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid rgba(255,255,255,0.35); transition: background 0.2s; }
         .btn-outline-w:hover { background: rgba(255,255,255,0.18); }
-        .hero-stats-row { position: absolute; bottom: 0; right: 0; display: flex; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-radius: 16px 0 0 0; }
-        .hstat { padding: 1.25rem 1.75rem; text-align: center; border-left: 1px solid rgba(155,193,76,0.15); }
-        .hstat:first-child { border-left: none; }
-        .hstat-num { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 700; color: var(--green-dark); line-height: 1; }
+
+        /* Stats — separate row BELOW hero, not overlapping */
+        .hero-stats-bar {
+          position: relative;
+          z-index: 2;
+          background: rgba(255,255,255,0.97);
+          backdrop-filter: blur(12px);
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          border-top: 3px solid var(--green-light);
+        }
+        .hstat {
+          flex: 1;
+          min-width: 120px;
+          padding: 1.25rem 1.5rem;
+          text-align: center;
+          border-right: 1px solid rgba(155,193,76,0.12);
+        }
+        .hstat:last-child { border-right: none; }
+        .hstat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--green-dark); line-height: 1; }
         .hstat-lbl { font-size: 11px; color: var(--muted); margin-top: 3px; white-space: nowrap; }
 
         /* SECTION COMMONS */
@@ -138,7 +173,7 @@ export default function AboutPage() {
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 700; color: #1a1a1a; line-height: 1.15; margin-bottom: 0.85rem; }
         .section-sub { font-size: 15px; color: var(--muted); line-height: 1.8; }
 
-        /* STORY SECTION */
+        /* STORY */
         .story-section { background: var(--white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
         .story-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
         .story-content { display: flex; flex-direction: column; gap: 1.25rem; }
@@ -146,12 +181,11 @@ export default function AboutPage() {
         .story-content p strong { color: var(--green-deeper); font-weight: 600; }
         .story-link { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--green-dark); text-decoration: none; padding: 11px 22px; border: 1.5px solid var(--green-light); border-radius: 9px; margin-top: 0.5rem; transition: background 0.2s, color 0.2s; width: fit-content; }
         .story-link:hover { background: var(--green-light); color: #fff; }
-        .story-media { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 1rem; }
+        .story-media { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
         .story-img-big { grid-column: 1 / -1; border-radius: 16px; overflow: hidden; height: 280px; background: linear-gradient(135deg, var(--green-deeper), #4a7a18); }
         .story-img-big img { width: 100%; height: 100%; object-fit: cover; }
         .story-img-sm { border-radius: 12px; overflow: hidden; height: 180px; background: linear-gradient(135deg, #4a7a18, var(--green-dark)); }
         .story-img-sm img { width: 100%; height: 100%; object-fit: cover; }
-        .img-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.25); }
 
         /* STATS BAND */
         .stats-band { background: var(--green-dark); padding: 2.5rem 1.5rem; }
@@ -174,10 +208,10 @@ export default function AboutPage() {
         .mv-card p { font-size: 14.5px; color: rgba(255,255,255,0.82); line-height: 1.8; }
         .mv-card::before { content: ''; position: absolute; bottom: -20px; right: -20px; width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.05); }
 
-        /* FULL BANNER 1 */
-        .banner1 { position: relative; height: clamp(340px,48vw,560px); overflow: hidden; display: flex; align-items: center; }
+        /* BANNER 1 */
+        .banner1 { position: relative; height: clamp(320px,44vw,540px); overflow: hidden; display: flex; align-items: center; }
         .banner1 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-        .banner1-ov { position: absolute; inset: 0; background: linear-gradient(to right, rgba(61,92,16,0.92) 0%, rgba(61,92,16,0.55) 55%, rgba(61,92,16,0.1) 100%); }
+        .banner1-ov { position: absolute; inset: 0; background: linear-gradient(to right, rgba(61,92,16,0.92) 0%, rgba(61,92,16,0.55) 55%, rgba(61,92,16,0.08) 100%); }
         .banner1-content { position: relative; padding: 0 clamp(1.5rem,6vw,6rem); max-width: 640px; }
         .banner1-content .section-tag { color: #c8e88a; background: rgba(155,193,76,0.2); border-color: rgba(155,193,76,0.35); }
         .banner1-content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,5vw,3.4rem); font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 1rem; }
@@ -191,8 +225,7 @@ export default function AboutPage() {
         /* VALUES */
         .values-section { background: var(--white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
         .values-inner { max-width: 1280px; margin: 0 auto; }
-        .values-header { margin-bottom: 2.5rem; }
-        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; margin-top: 2.5rem; }
         .value-card { background: var(--off-white); border: 1px solid rgba(155,193,76,0.15); border-radius: 16px; padding: 2rem; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; position: relative; overflow: hidden; }
         .value-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--green-light), var(--green-dark)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
         .value-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(90,122,30,0.1); border-color: rgba(155,193,76,0.3); }
@@ -201,18 +234,61 @@ export default function AboutPage() {
         .value-card h3 { font-size: 17px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
         .value-card p { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
 
-        /* TIMELINE */
+        /* ── TIMELINE FIX ── */
         .timeline-section { background: var(--off-white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
-        .timeline-inner { max-width: 900px; margin: 0 auto; }
+        .timeline-inner { max-width: 860px; margin: 0 auto; }
         .timeline-header { text-align: center; margin-bottom: 3rem; }
-        .timeline { position: relative; display: flex; flex-direction: column; gap: 0; }
-        .timeline::before { content: ''; position: absolute; left: 80px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--green-light), var(--green-dark)); }
-        .timeline-item { display: flex; gap: 2rem; position: relative; padding-bottom: 2.5rem; }
+        .timeline {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          padding-left: 120px; /* space for year labels */
+        }
+        /* The vertical line */
+        .timeline::before {
+          content: '';
+          position: absolute;
+          left: 100px;
+          top: 12px;
+          bottom: 12px;
+          width: 2px;
+          background: linear-gradient(to bottom, var(--green-light), var(--green-dark));
+        }
+        .timeline-item {
+          position: relative;
+          padding-bottom: 2.5rem;
+          padding-left: 2rem;
+        }
         .timeline-item:last-child { padding-bottom: 0; }
-        .timeline-year { width: 80px; flex-shrink: 0; text-align: right; padding-top: 4px; }
-        .timeline-year span { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; color: var(--green-dark); }
-        .timeline-dot { position: absolute; left: 73px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: var(--green-light); border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--green-light); flex-shrink: 0; }
-        .timeline-content { flex: 1; background: var(--white); border-radius: 12px; padding: 1.25rem 1.5rem; border: 1px solid var(--border); margin-left: 1rem; }
+        /* Year label — absolutely positioned LEFT of the line */
+        .timeline-year {
+          position: absolute;
+          left: -120px;
+          top: 4px;
+          width: 90px;
+          text-align: right;
+        }
+        .timeline-year span {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: var(--green-dark);
+        }
+        /* Dot ON the line */
+        .timeline-dot {
+          position: absolute;
+          left: -10px; /* center on the line: line is at left:0 of this container */
+          top: 8px;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: var(--green-light);
+          border: 3px solid var(--off-white);
+          box-shadow: 0 0 0 2px var(--green-light);
+          flex-shrink: 0;
+        }
+        .timeline-content { background: var(--white); border-radius: 12px; padding: 1.25rem 1.5rem; border: 1px solid var(--border); }
         .timeline-content h4 { font-size: 16px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
         .timeline-content p { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
 
@@ -223,16 +299,17 @@ export default function AboutPage() {
         .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1.5rem; }
         .team-card { background: var(--off-white); border: 1px solid rgba(155,193,76,0.15); border-radius: 18px; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; }
         .team-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(90,122,30,0.1); }
-        .team-img { height: 240px; background: linear-gradient(135deg, var(--green-deeper), #4a7a18); position: relative; overflow: hidden; }
+        .team-img { height: 240px; background: linear-gradient(135deg, var(--green-deeper), #4a7a18); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
         .team-img img { width: 100%; height: 100%; object-fit: cover; }
-        .team-img-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; color: rgba(255,255,255,0.3); }
-        .team-img-placeholder svg { opacity: 0.3; }
+        .team-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.25); }
+        .team-placeholder svg { opacity: 0.25; }
+        .team-placeholder span { font-size: 11px; }
         .team-body { padding: 1.5rem; }
         .team-body h3 { font-size: 17px; font-weight: 600; color: #1a1a1a; margin-bottom: 3px; }
         .team-role { font-size: 12px; font-weight: 600; color: var(--green-dark); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 8px; }
         .team-body p { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
-        /* MEDIA MOSAIC */
+        /* MOSAIC */
         .mosaic-section { background: var(--off-white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
         .mosaic-inner { max-width: 1280px; margin: 0 auto; }
         .mosaic-header { text-align: center; margin-bottom: 2.5rem; }
@@ -246,8 +323,8 @@ export default function AboutPage() {
         .mosaic-item:nth-child(4) { grid-column: span 2; }
         .mosaic-item:nth-child(5) { grid-column: span 2; }
         .mosaic-item:nth-child(6) { grid-column: span 2; }
+        .mosaic-ph { width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.2); }
         .mosaic-label { position: absolute; bottom: 0.75rem; left: 0.75rem; background: rgba(61,92,16,0.85); color: #fff; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 6px; }
-        .mosaic-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.2); }
 
         /* CERTIFICATIONS */
         .cert-section { background: var(--white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
@@ -260,20 +337,38 @@ export default function AboutPage() {
         .cert-card h4 { font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
         .cert-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
-        /* SERVICES LINK SECTION */
+        /* ── TESTIMONIALS (replaces FAQ) ── */
+        .testimonials-section { background: var(--green-deeper); padding: clamp(3rem,6vw,5rem) 1.5rem; }
+        .testimonials-inner { max-width: 1280px; margin: 0 auto; }
+        .testimonials-header { text-align: center; margin-bottom: 2.5rem; }
+        .testimonials-header .section-tag { color: #c8e88a; background: rgba(155,193,76,0.2); border-color: rgba(155,193,76,0.35); }
+        .testimonials-header .section-title { color: #fff; }
+        .testimonials-header .section-sub { color: rgba(255,255,255,0.7); margin: 0 auto; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 1.5rem; }
+        .testi-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 2rem; display: flex; flex-direction: column; gap: 1.1rem; transition: background 0.2s, border-color 0.2s; }
+        .testi-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(155,193,76,0.35); }
+        .testi-stars { display: flex; gap: 3px; }
+        .testi-star { color: #f5c518; font-size: 16px; }
+        .testi-text { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.8; font-style: italic; flex: 1; }
+        .testi-text::before { content: '\201C'; font-size: 28px; color: var(--green-light); line-height: 0; vertical-align: -10px; margin-right: 4px; }
+        .testi-author { display: flex; align-items: center; gap: 12px; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: rgba(155,193,76,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #c8e88a; font-size: 18px; font-weight: 700; font-family: 'Cormorant Garamond', serif; }
+        .testi-name { font-size: 14px; font-weight: 600; color: #fff; }
+        .testi-role { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+        /* SERVICES LINKS */
         .services-link-section { background: var(--off-white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
         .sl-inner { max-width: 1280px; margin: 0 auto; }
         .sl-header { text-align: center; margin-bottom: 2.5rem; }
-        .sl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 1rem; }
-        .sl-card { background: var(--white); border: 1px solid rgba(155,193,76,0.18); border-radius: 14px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.85rem; text-align: center; text-decoration: none; color: var(--text); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+        .sl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px,1fr)); gap: 1rem; }
+        .sl-card { background: var(--white); border: 1px solid rgba(155,193,76,0.18); border-radius: 14px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; text-align: center; text-decoration: none; color: var(--text); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
         .sl-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(90,122,30,0.1); border-color: rgba(155,193,76,0.35); }
-        .sl-icon { width: 52px; height: 52px; background: rgba(155,193,76,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--green-dark); }
-        .sl-card span { font-size: 13.5px; font-weight: 600; color: #1a1a1a; }
-        .sl-card small { font-size: 11.5px; color: var(--muted); }
-        .sl-arrow { color: var(--green-light); margin-top: auto; }
+        .sl-icon { width: 50px; height: 50px; background: rgba(155,193,76,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--green-dark); }
+        .sl-card span { font-size: 13px; font-weight: 600; color: #1a1a1a; }
+        .sl-card small { font-size: 11px; color: var(--muted); }
 
-        /* FULL BANNER 2 */
-        .banner2 { position: relative; height: clamp(340px,48vw,560px); overflow: hidden; display: flex; align-items: center; justify-content: flex-end; }
+        /* BANNER 2 */
+        .banner2 { position: relative; height: clamp(320px,44vw,540px); overflow: hidden; display: flex; align-items: center; justify-content: flex-end; }
         .banner2 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
         .banner2-ov { position: absolute; inset: 0; background: linear-gradient(to left, rgba(61,92,16,0.92) 0%, rgba(61,92,16,0.5) 55%, transparent 100%); }
         .banner2-content { position: relative; padding: 0 clamp(1.5rem,6vw,6rem); max-width: 620px; text-align: right; }
@@ -282,7 +377,7 @@ export default function AboutPage() {
         .banner2-content p { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.75; margin-bottom: 1.75rem; }
         .banner2-btns { display: flex; gap: 0.85rem; flex-wrap: wrap; justify-content: flex-end; }
 
-        /* CONTACT SECTION */
+        /* CONTACT */
         .contact-section { background: var(--white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
         .contact-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
         .contact-left { display: flex; flex-direction: column; gap: 1.25rem; }
@@ -297,33 +392,21 @@ export default function AboutPage() {
         .contact-form h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 700; color: #1a1a1a; margin-bottom: 1.25rem; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
         .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 0.85rem; }
-        .form-group label { font-size: 12px; font-weight: 600; color: #444; letter-spacing: 0.03em; }
+        .form-group label { font-size: 12px; font-weight: 600; color: #444; }
         .form-group input, .form-group select, .form-group textarea { padding: 11px 13px; border-radius: 9px; border: 1.5px solid rgba(155,193,76,0.2); background: var(--white); font-family: inherit; font-size: 13.5px; color: #333; outline: none; transition: border-color 0.2s; width: 100%; }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green-light); }
         .form-group textarea { resize: vertical; min-height: 100px; }
         .btn-submit { width: 100%; background: var(--green-light); color: #fff; padding: 13px; border-radius: 10px; font-size: 15px; font-weight: 600; border: none; cursor: pointer; font-family: inherit; transition: background 0.2s; }
         .btn-submit:hover { background: var(--green-dark); }
 
-        /* FAQ */
-        .faq-section { background: var(--off-white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
-        .faq-inner { max-width: 860px; margin: 0 auto; }
-        .faq-header { text-align: center; margin-bottom: 2.5rem; }
-        .faq-list { display: flex; flex-direction: column; gap: 1rem; }
-        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-        .faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 1.5rem; background: none; border: none; cursor: pointer; font-family: inherit; font-size: 15px; font-weight: 600; color: #1a1a1a; text-align: left; gap: 1rem; }
-        .faq-q:hover { color: var(--green-dark); }
-        .faq-icon { flex-shrink: 0; color: var(--green-light); transition: transform 0.3s; }
-        .faq-icon.open { transform: rotate(45deg); }
-        .faq-a { padding: 0 1.5rem 1.1rem; font-size: 14px; color: var(--muted); line-height: 1.75; }
-
         /* CTA */
-        .cta-band { background: var(--green-deeper); padding: 4rem 1.5rem; text-align: center; }
+        .cta-band { background: var(--green-light); padding: 4rem 1.5rem; text-align: center; }
         .cta-band h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 700; color: #fff; margin-bottom: 0.85rem; }
-        .cta-band p { color: rgba(255,255,255,0.8); font-size: 15px; margin-bottom: 2rem; }
+        .cta-band p { color: rgba(255,255,255,0.88); font-size: 15px; margin-bottom: 2rem; }
         .cta-btns { display: flex; gap: 0.85rem; justify-content: center; flex-wrap: wrap; }
         .btn-cta-w { background: #fff; color: var(--green-deeper); padding: 13px 28px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.15s, box-shadow 0.15s; }
         .btn-cta-w:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
-        .btn-cta-g { background: var(--green-light); color: #fff; padding: 13px 26px; border-radius: 10px; font-size: 14px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s; }
+        .btn-cta-g { background: var(--green-deeper); color: #fff; padding: 13px 26px; border-radius: 10px; font-size: 14px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s; }
         .btn-cta-g:hover { background: var(--green-dark); }
 
         /* FOOTER */
@@ -350,8 +433,7 @@ export default function AboutPage() {
           .stats-inner { grid-template-columns: repeat(3,1fr); }
           .mosaic-grid { grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(4,180px); }
           .mosaic-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-          .mosaic-item:nth-child(2), .mosaic-item:nth-child(3) { grid-column: span 1; }
-          .mosaic-item:nth-child(4), .mosaic-item:nth-child(5), .mosaic-item:nth-child(6) { grid-column: span 1; }
+          .mosaic-item:nth-child(n+2) { grid-column: span 1; }
         }
         @media (max-width: 900px) {
           .nav-list { display: none; }
@@ -365,11 +447,17 @@ export default function AboutPage() {
           .banner2-ov { background: linear-gradient(to right, rgba(61,92,16,0.92) 0%, rgba(61,92,16,0.5) 55%, transparent 100%); }
           .banner2 { justify-content: flex-start; }
           .banner2-btns { justify-content: flex-start; }
-          .hero-stats-row { position: relative; border-radius: 0; width: 100%; }
-          .hstat { flex: 1; }
           .mosaic-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
           .mosaic-item { aspect-ratio: 4/3; }
           .mosaic-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+        }
+        @media (max-width: 700px) {
+          .timeline { padding-left: 90px; }
+          .timeline::before { left: 70px; }
+          .timeline-year { left: -90px; width: 62px; }
+          .timeline-year span { font-size: 1rem; }
+          .hstat { min-width: 80px; padding: 1rem; }
+          .hstat-num { font-size: 1.5rem; }
         }
         @media (max-width: 600px) {
           .topbar-left { display: none; }
@@ -379,20 +467,19 @@ export default function AboutPage() {
           .form-row { grid-template-columns: 1fr; }
           .story-media { grid-template-columns: 1fr; }
           .story-img-big { height: 220px; }
-          .timeline::before { left: 60px; }
-          .timeline-year { width: 60px; }
-          .timeline-dot { left: 53px; }
           .mosaic-grid { grid-template-columns: 1fr; }
           .mosaic-item:nth-child(1) { grid-column: span 1; }
+          .hero-stats-bar { flex-wrap: wrap; }
+          .hstat { min-width: 50%; border-bottom: 1px solid rgba(155,193,76,0.1); }
         }
         @media (max-width: 480px) {
-          .hero-btns { flex-direction: column; }
-          .btn-green, .btn-outline-w { justify-content: center; }
-          .cta-btns, .banner-btns, .banner2-btns { flex-direction: column; align-items: center; }
-          .btn-white, .btn-outline-white, .btn-cta-w, .btn-cta-g { width: 100%; justify-content: center; }
+          .hero-btns, .cta-btns, .banner-btns, .banner2-btns { flex-direction: column; align-items: stretch; }
+          .btn-green, .btn-outline-w, .btn-white, .btn-outline-white, .btn-cta-w, .btn-cta-g { justify-content: center; }
           .footer-main { grid-template-columns: 1fr; }
-          .hero-stats-row { flex-wrap: wrap; }
-          .hstat { min-width: 50%; }
+          .timeline { padding-left: 70px; }
+          .timeline::before { left: 50px; }
+          .timeline-year { left: -70px; width: 44px; }
+          .timeline-year span { font-size: 0.85rem; }
         }
         @media (max-width: 380px) { .logo-text .sub { display: none; } }
       `}</style>
@@ -453,9 +540,9 @@ export default function AboutPage() {
         </div>
       </nav>
 
-      {/* HERO */}
+      {/* ── HERO (fixed) ── */}
       <section className="hero">
-        <img src="/interior1.jpg" alt="All Care Technical Services Dubai" className="hero-img" onError={e => { e.currentTarget.style.opacity = '0'; }} />
+        <img src="/interior1.jpg" alt="All Care Technical Services Dubai" className="hero-img" onError={e => { e.currentTarget.style.opacity='0'; }} />
         <div className="hero-overlay" />
         <div className="hero-overlay2" />
         <div className="hero-content">
@@ -472,17 +559,18 @@ export default function AboutPage() {
               Our Story
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-            <a href="/services" className="btn-outline-w">
-              Our Services
-            </a>
+            <a href="/services" className="btn-outline-w">Our Services</a>
           </div>
         </div>
-        <div className="hero-stats-row">
+        {/* Stats bar as a natural flow element INSIDE hero flex column */}
+        <div className="hero-stats-bar">
           {[
-            { num: '10+', lbl: 'Years in Dubai' },
-            { num: '500+', lbl: 'Projects Done' },
-            { num: '50+', lbl: 'Team Members' },
-            { num: '4.9★', lbl: 'Client Rating' },
+            { num:'10+', lbl:'Years in Dubai' },
+            { num:'500+', lbl:'Projects Done' },
+            { num:'50+', lbl:'Team Members' },
+            { num:'20+', lbl:'Services' },
+            { num:'4.9★', lbl:'Client Rating' },
+            { num:'24/7', lbl:'Support' },
           ].map(s => (
             <div className="hstat" key={s.lbl}>
               <div className="hstat-num">{s.num}</div>
@@ -499,8 +587,8 @@ export default function AboutPage() {
             <span className="section-tag">Our Story</span>
             <h2 className="section-title">From a Small Team to Dubai&apos;s Most Trusted Name</h2>
             <p>All Care Technical Services was founded in <strong>2014</strong> with a simple but powerful mission — to deliver renovation and technical services that Dubai residents and businesses could truly rely on. We started as a small team of five dedicated professionals with a shared passion for quality craftsmanship.</p>
-            <p>Over the years, we have grown into a full-service company with <strong>50+ skilled professionals</strong>, covering everything from interior and exterior renovation to pool construction, landscaping, electrical works, AC ducting, aluminum fabrication, and plant supply.</p>
-            <p>Today, with <strong>500+ completed projects</strong> across Dubai — from luxury villas in Palm Jumeirah to corporate offices in DIFC — we are proud to be the company that Dubai trusts for all their renovation and technical needs.</p>
+            <p>Over the years we have grown into a full-service company with <strong>50+ skilled professionals</strong>, covering everything from interior and exterior renovation to pool construction, landscaping, electrical works, AC ducting, aluminum fabrication, and plant supply.</p>
+            <p>Today, with <strong>500+ completed projects</strong> across Dubai — from luxury villas in Palm Jumeirah to corporate offices in DIFC — we are proud to be the company that Dubai trusts for all renovation and technical needs.</p>
             <p>Our growth has been built on one foundation — <strong>the trust of our clients</strong>. Every project we complete is a testament to our commitment to quality, transparency, and delivering exactly what we promise.</p>
             <a href="/services" className="story-link">
               Explore Our Services
@@ -509,13 +597,13 @@ export default function AboutPage() {
           </div>
           <div className="story-media">
             <div className="story-img-big">
-              <img src="/interior2.jpg" alt="All Care Technical Services Work" onError={e => { e.currentTarget.style.display='none'; }} />
+              <img src="/interior2.jpg" alt="All Care Work" onError={e => { e.currentTarget.style.display='none'; }} />
             </div>
             <div className="story-img-sm">
-              <img src="/Interior7.jpg" alt="Interior Renovation Dubai" onError={e => { e.currentTarget.style.display='none'; }} />
+              <img src="/Interior7.jpg" alt="Interior Renovation" onError={e => { e.currentTarget.style.display='none'; }} />
             </div>
             <div className="story-img-sm">
-              <img src="/pool4.webp" alt="Pool Construction Dubai" onError={e => { e.currentTarget.style.display='none'; }} />
+              <img src="/pool4.webp" alt="Pool Construction" onError={e => { e.currentTarget.style.display='none'; }} />
             </div>
           </div>
         </div>
@@ -545,34 +633,28 @@ export default function AboutPage() {
       <section className="mv-section">
         <div className="mv-inner">
           <span className="section-tag">Who We Are</span>
-          <h2 className="section-title">Our Mission, Vision & Approach</h2>
+          <h2 className="section-title">Our Mission, Vision &amp; Approach</h2>
           <div className="mv-grid">
             <div className="mv-card mission">
-              <div className="mv-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-              </div>
+              <div className="mv-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
               <h3>Our Mission</h3>
-              <p>To deliver exceptional renovation and technical services that transform spaces, exceed client expectations, and set the standard for quality and reliability across Dubai. Every project we undertake is completed with the same passion, precision, and professionalism — regardless of size or budget.</p>
+              <p>To deliver exceptional renovation and technical services that transform spaces, exceed client expectations, and set the standard for quality and reliability across Dubai. Every project is completed with the same passion, precision, and professionalism — regardless of size or budget.</p>
             </div>
             <div className="mv-card vision">
-              <div className="mv-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              </div>
+              <div className="mv-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
               <h3>Our Vision</h3>
-              <p>To become the leading renovation and technical services company in the UAE — known not just for what we build, but for how we build it. We envision a future where every Dubai home and business can access world-class renovation services with total confidence in quality, transparency, and after-care.</p>
+              <p>To become the leading renovation and technical services company in the UAE — known not just for what we build, but for how we build it. We envision a future where every Dubai home and business can access world-class renovation services with total confidence.</p>
             </div>
             <div className="mv-card approach">
-              <div className="mv-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-              </div>
+              <div className="mv-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
               <h3>Our Approach</h3>
-              <p>We treat every project as if it were our own home. From the first consultation to the final handover, we prioritize clear communication, honest pricing, and delivering work that we are genuinely proud of. We never cut corners — because your trust is worth more than any shortcut.</p>
+              <p>We treat every project as if it were our own home. From the first consultation to the final handover, we prioritize clear communication, honest pricing, and delivering work that we are genuinely proud of. We never cut corners — your trust is worth more than any shortcut.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FULL BANNER 1 */}
+      {/* BANNER 1 */}
       <div className="banner1">
         <img src="/landscape3.jpg" alt="All Care Projects Dubai" onError={e => { e.currentTarget.style.display='none'; }} />
         <div className="banner1-ov" />
@@ -593,11 +675,9 @@ export default function AboutPage() {
       {/* VALUES */}
       <section className="values-section">
         <div className="values-inner">
-          <div className="values-header">
-            <span className="section-tag">What Drives Us</span>
-            <h2 className="section-title">Our Core Values</h2>
-            <p className="section-sub">The principles that guide every decision, every project, and every interaction at All Care Technical Services.</p>
-          </div>
+          <span className="section-tag">What Drives Us</span>
+          <h2 className="section-title">Our Core Values</h2>
+          <p className="section-sub">The principles that guide every decision, every project, and every interaction at All Care Technical Services.</p>
           <div className="values-grid">
             {values.map(v => (
               <div className="value-card" key={v.title}>
@@ -610,13 +690,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* TIMELINE */}
+      {/* ── TIMELINE (fixed) ── */}
       <section className="timeline-section">
         <div className="timeline-inner">
           <div className="timeline-header">
             <span className="section-tag">Our Journey</span>
-            <h2 className="section-title">10 Years of Growth & Excellence</h2>
-            <p className="section-sub" style={{margin:'0 auto', textAlign:'center'}}>From a small startup to Dubai&apos;s trusted renovation company — our story of growth and achievement.</p>
+            <h2 className="section-title">10 Years of Growth &amp; Excellence</h2>
+            <p className="section-sub" style={{margin:'0 auto', textAlign:'center'}}>From a small startup to Dubai&apos;s trusted renovation company — our story of growth.</p>
           </div>
           <div className="timeline">
             {milestones.map(m => (
@@ -646,9 +726,9 @@ export default function AboutPage() {
               <div className="team-card" key={t.name}>
                 <div className="team-img">
                   <img src={t.img} alt={t.name} onError={e => { e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling.style.display='flex'; }} />
-                  <div className="team-img-placeholder" style={{display:'none'}}>
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    <span style={{fontSize:'11px', color:'rgba(255,255,255,0.3)'}}>Photo Coming Soon</span>
+                  <div className="team-placeholder" style={{display:'none'}}>
+                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span>Photo Coming Soon</span>
                   </div>
                 </div>
                 <div className="team-body">
@@ -662,13 +742,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* MOSAIC MEDIA */}
+      {/* MOSAIC */}
       <section className="mosaic-section">
         <div className="mosaic-inner">
           <div className="mosaic-header">
             <span className="section-tag">Our Projects</span>
             <h2 className="section-title">A Glimpse of Our Work</h2>
-            <p className="section-sub" style={{margin:'0 auto'}}>A selection of completed projects showcasing our range of services and quality of work across Dubai.</p>
+            <p className="section-sub" style={{margin:'0 auto'}}>A selection of completed projects showcasing our range of services and quality across Dubai.</p>
           </div>
           <div className="mosaic-grid">
             {[
@@ -681,7 +761,7 @@ export default function AboutPage() {
             ].map((item, i) => (
               <div className="mosaic-item" key={i}>
                 <img src={item.src} alt={item.label} onError={e => { e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling.style.display='flex'; }} />
-                <div className="mosaic-placeholder" style={{display:'none'}}>
+                <div className="mosaic-ph" style={{display:'none'}}>
                   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                 </div>
                 <span className="mosaic-label">{item.label}</span>
@@ -696,7 +776,7 @@ export default function AboutPage() {
         <div className="cert-inner">
           <div className="cert-header">
             <span className="section-tag">Our Credentials</span>
-            <h2 className="section-title">Licensed, Certified & Insured</h2>
+            <h2 className="section-title">Licensed, Certified &amp; Insured</h2>
             <p className="section-sub" style={{margin:'0 auto'}}>We operate with full compliance to UAE regulations — giving you complete confidence and peace of mind.</p>
           </div>
           <div className="cert-grid">
@@ -711,7 +791,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SERVICES INTERNAL LINKS */}
+      {/* ── TESTIMONIALS (replaces FAQ) ── */}
+      <section className="testimonials-section">
+        <div className="testimonials-inner">
+          <div className="testimonials-header">
+            <span className="section-tag">Client Reviews</span>
+            <h2 className="section-title">What Our Clients Say</h2>
+            <p className="section-sub">Real feedback from real clients — the trust of Dubai&apos;s homeowners, developers, and businesses.</p>
+          </div>
+          <div className="testimonials-grid">
+            {testimonials.map(t => (
+              <div className="testi-card" key={t.name}>
+                <div className="testi-stars">
+                  {[...Array(t.rating)].map((_, i) => <span className="testi-star" key={i}>★</span>)}
+                </div>
+                <p className="testi-text">{t.text}</p>
+                <div className="testi-author">
+                  <div className="testi-avatar">{t.name.charAt(0)}</div>
+                  <div>
+                    <div className="testi-name">{t.name}</div>
+                    <div className="testi-role">{t.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES LINKS */}
       <section className="services-link-section">
         <div className="sl-inner">
           <div className="sl-header">
@@ -721,31 +829,28 @@ export default function AboutPage() {
           </div>
           <div className="sl-grid">
             {[
-              { href:'/services/interior-renovation', icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>, label:'Interior Renovation', sub:'Ceilings, Flooring, Fit-Outs' },
-              { href:'/services', icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 9h20"/></svg>, label:'Exterior Renovation', sub:'Facade, Waterproofing' },
-              { href:'/services', icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h20M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10"/><path d="M6 16c0 2.2 2.7 4 6 4s6-1.8 6-4"/></svg>, label:'Pool Construction', sub:'Design & Build' },
-              { href:'/services', icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22a10 10 0 0 1-10-10"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 6v6l4 2"/></svg>, label:'Landscaping', sub:'Gardens & Outdoor' },
-              { href:'/services', icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>, label:'Electrical Works', sub:'Installation & Maintenance' },
-              { href:'/services', icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2"/></svg>, label:'AC & Ducting', sub:'Installation & Service' },
-              { href:'/services', icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7"/><path d="M9 22V12h6v10"/><line x1="3" y1="22" x2="21" y2="22"/></svg>, label:'Pergola & Shade', sub:'Outdoor Structures' },
-              { href:'/services', icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0 1 10 0c0 5-5 8-5 8z"/></svg>, label:'Plants Supply', sub:'Indoor & Outdoor Plants' },
-              { href:'/services', icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>, label:'Turnkey Solutions', sub:'Full Project Delivery' },
-              { href:'/services', icon:<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>, label:'Aluminum Work', sub:'Doors, Windows, Cladding' },
+              { href:'/services/interior-renovation', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>, label:'Interior Renovation', sub:'Ceilings, Flooring, Fit-Outs' },
+              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 9h20"/></svg>, label:'Exterior Renovation', sub:'Facade, Waterproofing' },
+              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h20M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10"/></svg>, label:'Pool Construction', sub:'Design & Build' },
+              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0 1 10 0c0 5-5 8-5 8z"/></svg>, label:'Landscaping', sub:'Gardens & Outdoor' },
+              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>, label:'Electrical Works', sub:'Installation & Maintenance' },
+              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/></svg>, label:'AC & Ducting', sub:'Installation & Service' },
+              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7"/><path d="M9 22V12h6v10"/><line x1="3" y1="22" x2="21" y2="22"/></svg>, label:'Pergola & Shade', sub:'Outdoor Structures' },
+              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>, label:'Turnkey Solutions', sub:'Full Project Delivery' },
+              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>, label:'Aluminum Work', sub:'Doors, Windows, Cladding' },
+              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>, label:'Fencing & Gates', sub:'Security & Style' },
             ].map(s => (
               <a href={s.href} className="sl-card" key={s.label}>
                 <div className="sl-icon">{s.icon}</div>
                 <span>{s.label}</span>
                 <small>{s.sub}</small>
-                <div className="sl-arrow">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </div>
               </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FULL BANNER 2 */}
+      {/* BANNER 2 */}
       <div className="banner2">
         <img src="/pool6.webp" alt="All Care Technical Services" onError={e => { e.currentTarget.style.display='none'; }} />
         <div className="banner2-ov" />
@@ -772,7 +877,7 @@ export default function AboutPage() {
           <div className="contact-left">
             <span className="section-tag">Get In Touch</span>
             <h2 className="section-title">Let&apos;s Work Together</h2>
-            <p>Ready to start your project? Contact us today for a free consultation and quotation — no obligation, completely free. We serve all areas across Dubai and the UAE.</p>
+            <p>Ready to start your project? Contact us today for a free consultation and quotation — no obligation, completely free.</p>
             <div className="contact-items">
               <div className="contact-item">
                 <div className="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.58 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.22a16 16 0 0 0 5.87 5.87l1.09-1.09a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 16z"/></svg></div>
@@ -815,20 +920,6 @@ export default function AboutPage() {
             </div>
             <div className="form-group"><label>Message</label><textarea placeholder="Tell us about your project..." /></div>
             <button className="btn-submit">Send Message</button>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="faq-section">
-        <div className="faq-inner">
-          <div className="faq-header">
-            <span className="section-tag">FAQ</span>
-            <h2 className="section-title">About All Care Technical Services</h2>
-            <p className="section-sub" style={{margin:'0 auto'}}>Common questions about our company and how we work.</p>
-          </div>
-          <div className="faq-list">
-            {faqs.map((f, i) => <FaqItem key={i} q={f.q} a={f.a} />)}
           </div>
         </div>
       </section>
