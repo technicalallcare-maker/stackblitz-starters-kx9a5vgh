@@ -401,8 +401,8 @@ export default function ExteriorRenovationPage() {
         <div className="hero-ov2" />
         <div className="hero-content">
           <div className="breadcrumb">
-            <a href="/">Home</a><span>></span>
-            <a href="/services">Services</a><span>></span>
+           <a href="/">Home</a><span>&gt;</span>
+            <a href="/services">Services</a><span>&gt;</span>
             <span className="breadcrumb-active">Exterior Renovation</span>
           </div>
           <div className="hero-badge"><div className="hero-dot" /> Expert Exterior Renovation Dubai</div>
