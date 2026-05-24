@@ -13,15 +13,6 @@ export default function AboutPage() {
     { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>, title: 'Innovation', desc: 'We stay ahead of trends, adopting the latest techniques, materials, and design innovations.' },
   ];
 
-  const team = [
-    { name: 'Mohammed Al Rashid', role: 'Founder & CEO', desc: '15+ years in UAE construction and renovation. Visionary leader with a passion for quality.', img: '/team1.jpg' },
-    { name: 'Ahmed Hassan', role: 'Operations Director', desc: 'Expert in project management and delivery. Ensures every project runs smoothly from start to finish.', img: '/team2.jpg' },
-    { name: 'Ravi Kumar', role: 'Head of Interior Design', desc: '12+ years designing luxury interiors across Dubai. Transforms client visions into stunning spaces.', img: '/team3.jpg' },
-    { name: 'Khalid Al Farsi', role: 'Technical Manager', desc: 'Certified engineer overseeing all MEP, electrical, and civil works to the highest standards.', img: '/team4.jpg' },
-    { name: 'Sanjay Patel', role: 'Pool & Landscape Lead', desc: '10+ years creating stunning pools and landscapes across Dubai villas and communities.', img: '/team5.jpg' },
-    { name: 'Omar Yasin', role: 'Client Relations Manager', desc: 'Your dedicated point of contact ensuring communication is always clear and smooth.', img: '/team6.jpg' },
-  ];
-
   const milestones = [
     { year: '2014', title: 'Company Founded', desc: 'All Care Technical Services was established in Dubai with a team of 5 dedicated professionals.' },
     { year: '2016', title: 'First 100 Projects', desc: 'Reached 100 completed projects milestone, expanding our services to include pool construction.' },
@@ -45,6 +36,16 @@ export default function AboutPage() {
     { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>, title: 'Fully Insured', desc: 'Comprehensive public liability insurance covering all our projects and operations.' },
     { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>, title: 'Valid Trade License', desc: 'Valid UAE trade license covering all renovation, construction, and technical services.' },
     { icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>, title: 'Quality Certified', desc: 'ISO-aligned quality management systems ensuring consistent excellence across all projects.' },
+  ];
+
+  // ✅ Mosaic images — 6 images, no labels
+  const mosaicImages = [
+    { src: '/Luxury_Interior.jpg', alt: 'Luxury Interior Dubai' },
+    { src: '/pool_construction.jpeg', alt: 'Pool Construction Dubai' },
+    { src: '/about2.webp', alt: 'Villa Pool Dubai' },
+    { src: '/maxresdefault__2_.jpg', alt: 'Interior Living Space' },
+    { src: '/pool_and_outdoor.jpg', alt: 'Pool and Outdoor' },
+    { src: '/about3.jpg', alt: 'Outdoor Living Dubai' },
   ];
 
   return (
@@ -88,7 +89,7 @@ export default function AboutPage() {
         .mobile-nav a:hover { color: var(--green-dark); }
         .mob-cta { margin-top: 12px; background: var(--green-light); color: #fff !important; text-align: center; padding: 13px; border-radius: 9px; font-weight: 600; border-bottom: none !important; }
 
-        /* ── HERO FIX ── */
+        /* HERO */
         .hero {
           position: relative;
           width: 100%;
@@ -109,12 +110,7 @@ export default function AboutPage() {
         .hero-overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(
-            to top,
-            rgba(10,16,6,0.96) 0%,
-            rgba(10,16,6,0.65) 40%,
-            rgba(10,16,6,0.2) 100%
-          );
+          background: linear-gradient(to top, rgba(10,16,6,0.96) 0%, rgba(10,16,6,0.65) 40%, rgba(10,16,6,0.2) 100%);
         }
         .hero-overlay2 {
           position: absolute;
@@ -126,7 +122,6 @@ export default function AboutPage() {
           z-index: 2;
           padding: clamp(2.5rem,5vw,4rem) clamp(1.5rem,6vw,6rem);
           max-width: 820px;
-          /* push content above the stats bar */
           padding-bottom: clamp(2rem,4vw,3.5rem);
         }
         .breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 1.25rem; flex-wrap: wrap; }
@@ -146,7 +141,7 @@ export default function AboutPage() {
         .btn-outline-w { background: rgba(255,255,255,0.1); color: #fff; padding: 13px 22px; border-radius: 10px; font-size: 14px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid rgba(255,255,255,0.35); transition: background 0.2s; }
         .btn-outline-w:hover { background: rgba(255,255,255,0.18); }
 
-        /* Stats — separate row BELOW hero, not overlapping */
+        /* HERO STATS BAR */
         .hero-stats-bar {
           position: relative;
           z-index: 2;
@@ -157,13 +152,7 @@ export default function AboutPage() {
           flex-wrap: wrap;
           border-top: 3px solid var(--green-light);
         }
-        .hstat {
-          flex: 1;
-          min-width: 120px;
-          padding: 1.25rem 1.5rem;
-          text-align: center;
-          border-right: 1px solid rgba(155,193,76,0.12);
-        }
+        .hstat { flex: 1; min-width: 120px; padding: 1.25rem 1.5rem; text-align: center; border-right: 1px solid rgba(155,193,76,0.12); }
         .hstat:last-child { border-right: none; }
         .hstat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--green-dark); line-height: 1; }
         .hstat-lbl { font-size: 11px; color: var(--muted); margin-top: 3px; white-space: nowrap; }
@@ -181,10 +170,12 @@ export default function AboutPage() {
         .story-content p strong { color: var(--green-deeper); font-weight: 600; }
         .story-link { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--green-dark); text-decoration: none; padding: 11px 22px; border: 1.5px solid var(--green-light); border-radius: 9px; margin-top: 0.5rem; transition: background 0.2s, color 0.2s; width: fit-content; }
         .story-link:hover { background: var(--green-light); color: #fff; }
+
+        /* ✅ ABOUT SECTION - 3 images grid */
         .story-media { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        .story-img-big { grid-column: 1 / -1; border-radius: 16px; overflow: hidden; height: 280px; background: linear-gradient(135deg, var(--green-deeper), #4a7a18); }
+        .story-img-big { grid-column: 1 / -1; border-radius: 16px; overflow: hidden; height: 280px; }
         .story-img-big img { width: 100%; height: 100%; object-fit: cover; }
-        .story-img-sm { border-radius: 12px; overflow: hidden; height: 180px; background: linear-gradient(135deg, #4a7a18, var(--green-dark)); }
+        .story-img-sm { border-radius: 12px; overflow: hidden; height: 180px; }
         .story-img-sm img { width: 100%; height: 100%; object-fit: cover; }
 
         /* STATS BAND */
@@ -208,9 +199,9 @@ export default function AboutPage() {
         .mv-card p { font-size: 14.5px; color: rgba(255,255,255,0.82); line-height: 1.8; }
         .mv-card::before { content: ''; position: absolute; bottom: -20px; right: -20px; width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.05); }
 
-        /* BANNER 1 */
+        /* ✅ BANNER 1 — Our Work Speaks (about_page_last_section.jpg) */
         .banner1 { position: relative; height: clamp(320px,44vw,540px); overflow: hidden; display: flex; align-items: center; }
-        .banner1 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .banner1 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
         .banner1-ov { position: absolute; inset: 0; background: linear-gradient(to right, rgba(61,92,16,0.92) 0%, rgba(61,92,16,0.55) 55%, rgba(61,92,16,0.08) 100%); }
         .banner1-content { position: relative; padding: 0 clamp(1.5rem,6vw,6rem); max-width: 640px; }
         .banner1-content .section-tag { color: #c8e88a; background: rgba(155,193,76,0.2); border-color: rgba(155,193,76,0.35); }
@@ -234,88 +225,28 @@ export default function AboutPage() {
         .value-card h3 { font-size: 17px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
         .value-card p { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
 
-        /* ── TIMELINE FIX ── */
+        /* TIMELINE */
         .timeline-section { background: var(--off-white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
         .timeline-inner { max-width: 860px; margin: 0 auto; }
         .timeline-header { text-align: center; margin-bottom: 3rem; }
-        .timeline {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          gap: 0;
-          padding-left: 120px; /* space for year labels */
-        }
-        /* The vertical line */
-        .timeline::before {
-          content: '';
-          position: absolute;
-          left: 100px;
-          top: 12px;
-          bottom: 12px;
-          width: 2px;
-          background: linear-gradient(to bottom, var(--green-light), var(--green-dark));
-        }
-        .timeline-item {
-          position: relative;
-          padding-bottom: 2.5rem;
-          padding-left: 2rem;
-        }
+        .timeline { position: relative; display: flex; flex-direction: column; gap: 0; padding-left: 120px; }
+        .timeline::before { content: ''; position: absolute; left: 100px; top: 12px; bottom: 12px; width: 2px; background: linear-gradient(to bottom, var(--green-light), var(--green-dark)); }
+        .timeline-item { position: relative; padding-bottom: 2.5rem; padding-left: 2rem; }
         .timeline-item:last-child { padding-bottom: 0; }
-        /* Year label — absolutely positioned LEFT of the line */
-        .timeline-year {
-          position: absolute;
-          left: -120px;
-          top: 4px;
-          width: 90px;
-          text-align: right;
-        }
-        .timeline-year span {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 1.2rem;
-          font-weight: 700;
-          color: var(--green-dark);
-        }
-        /* Dot ON the line */
-        .timeline-dot {
-          position: absolute;
-          left: -10px; /* center on the line: line is at left:0 of this container */
-          top: 8px;
-          width: 16px;
-          height: 16px;
-          border-radius: 50%;
-          background: var(--green-light);
-          border: 3px solid var(--off-white);
-          box-shadow: 0 0 0 2px var(--green-light);
-          flex-shrink: 0;
-        }
+        .timeline-year { position: absolute; left: -120px; top: 4px; width: 90px; text-align: right; }
+        .timeline-year span { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--green-dark); }
+        .timeline-dot { position: absolute; left: -10px; top: 8px; width: 16px; height: 16px; border-radius: 50%; background: var(--green-light); border: 3px solid var(--off-white); box-shadow: 0 0 0 2px var(--green-light); flex-shrink: 0; }
         .timeline-content { background: var(--white); border-radius: 12px; padding: 1.25rem 1.5rem; border: 1px solid var(--border); }
         .timeline-content h4 { font-size: 16px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
         .timeline-content p { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
 
-        /* TEAM */
-        .team-section { background: var(--white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
-        .team-inner { max-width: 1280px; margin: 0 auto; }
-        .team-header { text-align: center; margin-bottom: 2.5rem; }
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1.5rem; }
-        .team-card { background: var(--off-white); border: 1px solid rgba(155,193,76,0.15); border-radius: 18px; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; }
-        .team-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(90,122,30,0.1); }
-        .team-img { height: 240px; background: linear-gradient(135deg, var(--green-deeper), #4a7a18); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-        .team-img img { width: 100%; height: 100%; object-fit: cover; }
-        .team-placeholder { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.25); }
-        .team-placeholder svg { opacity: 0.25; }
-        .team-placeholder span { font-size: 11px; }
-        .team-body { padding: 1.5rem; }
-        .team-body h3 { font-size: 17px; font-weight: 600; color: #1a1a1a; margin-bottom: 3px; }
-        .team-role { font-size: 12px; font-weight: 600; color: var(--green-dark); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 8px; }
-        .team-body p { font-size: 13px; color: var(--muted); line-height: 1.65; }
-
-        /* MOSAIC */
+        /* ✅ MOSAIC — No labels, 6 images from uploaded files */
         .mosaic-section { background: var(--off-white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
         .mosaic-inner { max-width: 1280px; margin: 0 auto; }
         .mosaic-header { text-align: center; margin-bottom: 2.5rem; }
         .mosaic-grid { display: grid; grid-template-columns: repeat(6,1fr); grid-template-rows: repeat(3, 200px); gap: 1rem; }
         .mosaic-item { border-radius: 14px; overflow: hidden; position: relative; background: linear-gradient(135deg, var(--green-deeper), #4a7a18); }
-        .mosaic-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+        .mosaic-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; display: block; }
         .mosaic-item:hover img { transform: scale(1.05); }
         .mosaic-item:nth-child(1) { grid-column: span 3; grid-row: span 2; }
         .mosaic-item:nth-child(2) { grid-column: span 3; }
@@ -324,7 +255,6 @@ export default function AboutPage() {
         .mosaic-item:nth-child(5) { grid-column: span 2; }
         .mosaic-item:nth-child(6) { grid-column: span 2; }
         .mosaic-ph { width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.2); }
-        .mosaic-label { position: absolute; bottom: 0.75rem; left: 0.75rem; background: rgba(61,92,16,0.85); color: #fff; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 6px; }
 
         /* CERTIFICATIONS */
         .cert-section { background: var(--white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
@@ -337,7 +267,7 @@ export default function AboutPage() {
         .cert-card h4 { font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
         .cert-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
-        /* ── TESTIMONIALS (replaces FAQ) ── */
+        /* TESTIMONIALS */
         .testimonials-section { background: var(--green-deeper); padding: clamp(3rem,6vw,5rem) 1.5rem; }
         .testimonials-inner { max-width: 1280px; margin: 0 auto; }
         .testimonials-header { text-align: center; margin-bottom: 2.5rem; }
@@ -350,7 +280,7 @@ export default function AboutPage() {
         .testi-stars { display: flex; gap: 3px; }
         .testi-star { color: #f5c518; font-size: 16px; }
         .testi-text { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.8; font-style: italic; flex: 1; }
-      .testi-text::before { content: '"'; font-size: 28px; color: var(--green-light); line-height: 0; vertical-align: -10px; margin-right: 4px; }
+        .testi-text::before { content: '"'; font-size: 28px; color: var(--green-light); line-height: 0; vertical-align: -10px; margin-right: 4px; }
         .testi-author { display: flex; align-items: center; gap: 12px; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
         .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: rgba(155,193,76,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #c8e88a; font-size: 18px; font-weight: 700; font-family: 'Cormorant Garamond', serif; }
         .testi-name { font-size: 14px; font-weight: 600; color: #fff; }
@@ -521,31 +451,38 @@ export default function AboutPage() {
           <ul className="nav-list">
             <li><a href="/">Home</a></li>
             <li style={{position:'relative'}} onMouseEnter={e => e.currentTarget.querySelector('.mega').style.display='grid'} onMouseLeave={e => e.currentTarget.querySelector('.mega').style.display='none'}>
-  <a href="/services">Services &#9662;</a>
-  <div className="mega" style={{display:'none',position:'absolute',top:'100%',left:'-200px',background:'#fff',borderRadius:'12px',boxShadow:'0 20px 60px rgba(0,0,0,0.12)',padding:'1.5rem 2rem',gridTemplateColumns:'1fr 1fr 1fr',gap:'0.5rem 2rem',minWidth:'680px',zIndex:300,border:'1px solid rgba(155,193,76,0.15)'}}>
-    <a href="/services/interior-renovation" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Interior Renovation</a>
-    <a href="/services/exterior-renovation" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Exterior Renovation</a>
-    <a href="/services" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Pool Construction</a>
-    <a href="/services" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Landscaping & Gardens</a>
-    <a href="/services/turnkey" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Turnkey Solutions</a>
-    <a href="/services/technical#aluminum" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Aluminum Work</a>
-    <a href="/services/technical#pergola" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Pergola & Shade</a>
-    <a href="/services/technical#electrical" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Electrical Works</a>
-    <a href="/services/technical#ac" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />AC & Ducting</a>
-    <a href="/services/technical#fencing" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Fencing & Gates</a>
-    <a href="/services/technical#waterproofing" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Waterproofing</a>
-    <a href="/services/technical#flooring" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Flooring & Tiling</a>
-    <a href="/services/technical#painting" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Painting & Finishing</a>
-    <a href="/services/technical#mep" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />MEP Works</a>
-    <a href="/services" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Plants Sale & Supply</a>
-    <a href="/services/technical#irrigation" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Irrigation Systems</a>
-    <a href="/services/technical#lighting" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Outdoor Lighting</a>
-    <a href="/services/technical#civil" style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}><span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />Civil Works</a>
-  </div>
-</li>
+              <a href="/services">Services &#9662;</a>
+              <div className="mega" style={{display:'none',position:'absolute',top:'100%',left:'-200px',background:'#fff',borderRadius:'12px',boxShadow:'0 20px 60px rgba(0,0,0,0.12)',padding:'1.5rem 2rem',gridTemplateColumns:'1fr 1fr 1fr',gap:'0.5rem 2rem',minWidth:'680px',zIndex:300,border:'1px solid rgba(155,193,76,0.15)'}}>
+                {[
+                  { href:'/services/interior-renovation', label:'Interior Renovation' },
+                  { href:'/services/exterior-renovation', label:'Exterior Renovation' },
+                  { href:'/services/exterior-renovation', label:'Pool Construction' },
+                  { href:'/services/exterior-renovation', label:'Landscaping & Gardens' },
+                  { href:'/services/turnkey', label:'Turnkey Solutions' },
+                  { href:'/services/technical#aluminum', label:'Aluminum Work' },
+                  { href:'/services/technical#pergola', label:'Pergola & Shade' },
+                  { href:'/services/technical#electrical', label:'Electrical Works' },
+                  { href:'/services/technical#ac', label:'AC & Ducting' },
+                  { href:'/services/technical#fencing', label:'Fencing & Gates' },
+                  { href:'/services/technical#waterproofing', label:'Waterproofing' },
+                  { href:'/services/technical', label:'Flooring & Tiling' },
+                  { href:'/services/technical', label:'Painting & Finishing' },
+                  { href:'/services/technical', label:'MEP Works' },
+                  { href:'/services/technical#irrigation', label:'Plants Sale & Supply' },
+                  { href:'/services/technical#irrigation', label:'Irrigation Systems' },
+                  { href:'/services/technical', label:'Outdoor Lighting' },
+                  { href:'/services/technical#civil', label:'Civil Works' },
+                ].map(s => (
+                  <a key={s.label} href={s.href} style={{fontSize:'13px',padding:'8px 0',color:'#333',display:'flex',alignItems:'center',gap:'8px',borderBottom:'1px solid #f5f5f5',textDecoration:'none'}}>
+                    <span style={{width:'6px',height:'6px',borderRadius:'50%',background:'#9BC14C',flexShrink:0}} />
+                    {s.label}
+                  </a>
+                ))}
+              </div>
+            </li>
             <li><a href="/about" className="active">About Us</a></li>
-            <li><a href="/#process">Our Process</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/process">Our Process</a></li>
+            <li><a href="/contact">Contact</a></li>
             <li><a href="tel:+971559747416" className="nav-cta-a">Call Now</a></li>
           </ul>
           <button className="hamburger" onClick={() => setMenuOpen(v => !v)} aria-label="Menu">
@@ -556,15 +493,19 @@ export default function AboutPage() {
           <a href="/">Home</a>
           <a href="/services">Services</a>
           <a href="/services/interior-renovation">Interior Renovation</a>
+          <a href="/services/exterior-renovation">Exterior Renovation</a>
+          <a href="/services/turnkey">Turnkey Solutions</a>
+          <a href="/services/technical">Technical Services</a>
           <a href="/about">About Us</a>
-          <a href="/#contact">Contact</a>
+          <a href="/process">Our Process</a>
+          <a href="/contact">Contact</a>
           <a href="tel:+971559747416" className="mob-cta">Call Now — +971 55 974 7416</a>
         </div>
       </nav>
 
-      {/* ── HERO (fixed) ── */}
+      {/* ✅ HERO — orig.jpg as background */}
       <section className="hero">
-        <img src="/interior1.jpg" alt="All Care Technical Services Dubai" className="hero-img" onError={e => { e.currentTarget.style.opacity='0'; }} />
+        <img src="/orig.jpg" alt="All Care Technical Services Dubai" className="hero-img" />
         <div className="hero-overlay" />
         <div className="hero-overlay2" />
         <div className="hero-content">
@@ -584,7 +525,6 @@ export default function AboutPage() {
             <a href="/services" className="btn-outline-w">Our Services</a>
           </div>
         </div>
-        {/* Stats bar as a natural flow element INSIDE hero flex column */}
         <div className="hero-stats-bar">
           {[
             { num:'10+', lbl:'Years in Dubai' },
@@ -617,15 +557,16 @@ export default function AboutPage() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
+          {/* ✅ About section — 3 images: about1.webp (big), about2.webp, about3.jpg */}
           <div className="story-media">
             <div className="story-img-big">
-              <img src="/interior2.jpg" alt="All Care Work" onError={e => { e.currentTarget.style.display='none'; }} />
+              <img src="/about1.webp" alt="All Care Technical Services Project" />
             </div>
             <div className="story-img-sm">
-              <img src="/Interior7.jpg" alt="Interior Renovation" onError={e => { e.currentTarget.style.display='none'; }} />
+              <img src="/about2.webp" alt="All Care Technical Services Work" />
             </div>
             <div className="story-img-sm">
-              <img src="/pool4.webp" alt="Pool Construction" onError={e => { e.currentTarget.style.display='none'; }} />
+              <img src="/about3.jpg" alt="All Care Technical Services Dubai" />
             </div>
           </div>
         </div>
@@ -676,9 +617,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* BANNER 1 */}
+      {/* ✅ BANNER 1 — about_page_last_section.jpg */}
       <div className="banner1">
-        <img src="/landscape3.jpg" alt="All Care Projects Dubai" onError={e => { e.currentTarget.style.display='none'; }} />
+        <img src="/about_page_last_section.jpg" alt="All Care Projects Dubai" />
         <div className="banner1-ov" />
         <div className="banner1-content">
           <span className="section-tag">Our Work Speaks</span>
@@ -689,7 +630,7 @@ export default function AboutPage() {
               View Our Services
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-            <a href="/#contact" className="btn-outline-white">Get Free Quote</a>
+            <a href="/contact" className="btn-outline-white">Get Free Quote</a>
           </div>
         </div>
       </div>
@@ -712,7 +653,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── TIMELINE (fixed) ── */}
+      {/* TIMELINE */}
       <section className="timeline-section">
         <div className="timeline-inner">
           <div className="timeline-header">
@@ -735,36 +676,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* TEAM */}
-      <section className="team-section">
-        <div className="team-inner">
-          <div className="team-header">
-            <span className="section-tag">Our People</span>
-            <h2 className="section-title">Meet the All Care Team</h2>
-            <p className="section-sub" style={{margin:'0 auto'}}>The dedicated professionals behind every project — skilled, passionate, and committed to excellence.</p>
-          </div>
-          <div className="team-grid">
-            {team.map(t => (
-              <div className="team-card" key={t.name}>
-                <div className="team-img">
-                  <img src={t.img} alt={t.name} onError={e => { e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling.style.display='flex'; }} />
-                  <div className="team-placeholder" style={{display:'none'}}>
-                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    <span>Photo Coming Soon</span>
-                  </div>
-                </div>
-                <div className="team-body">
-                  <h3>{t.name}</h3>
-                  <div className="team-role">{t.role}</div>
-                  <p>{t.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* MOSAIC */}
+      {/* ✅ MOSAIC — 6 images, NO labels/text overlays */}
       <section className="mosaic-section">
         <div className="mosaic-inner">
           <div className="mosaic-header">
@@ -773,20 +685,20 @@ export default function AboutPage() {
             <p className="section-sub" style={{margin:'0 auto'}}>A selection of completed projects showcasing our range of services and quality across Dubai.</p>
           </div>
           <div className="mosaic-grid">
-            {[
-              { src:'/interior1.jpg', label:'Interior Renovation' },
-              { src:'/interior2.jpg', label:'Living Room' },
-              { src:'/Interior7.jpg', label:'Luxury Interior' },
-              { src:'/pool4.webp', label:'Pool Construction' },
-              { src:'/landscape3.jpg', label:'Landscaping' },
-              { src:'/pool5.jpg', label:'Pool & Outdoor' },
-            ].map((item, i) => (
+            {mosaicImages.map((item, i) => (
               <div className="mosaic-item" key={i}>
-                <img src={item.src} alt={item.label} onError={e => { e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling.style.display='flex'; }} />
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  onError={e => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.nextElementSibling.style.display = 'flex';
+                  }}
+                />
                 <div className="mosaic-ph" style={{display:'none'}}>
                   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                 </div>
-                <span className="mosaic-label">{item.label}</span>
+                {/* ✅ NO mosaic-label — text removed as requested */}
               </div>
             ))}
           </div>
@@ -813,7 +725,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS (replaces FAQ) ── */}
+      {/* TESTIMONIALS */}
       <section className="testimonials-section">
         <div className="testimonials-inner">
           <div className="testimonials-header">
@@ -852,15 +764,15 @@ export default function AboutPage() {
           <div className="sl-grid">
             {[
               { href:'/services/interior-renovation', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>, label:'Interior Renovation', sub:'Ceilings, Flooring, Fit-Outs' },
-              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 9h20"/></svg>, label:'Exterior Renovation', sub:'Facade, Waterproofing' },
-              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h20M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10"/></svg>, label:'Pool Construction', sub:'Design & Build' },
-              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0 1 10 0c0 5-5 8-5 8z"/></svg>, label:'Landscaping', sub:'Gardens & Outdoor' },
-              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>, label:'Electrical Works', sub:'Installation & Maintenance' },
-              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/></svg>, label:'AC & Ducting', sub:'Installation & Service' },
-              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7"/><path d="M9 22V12h6v10"/><line x1="3" y1="22" x2="21" y2="22"/></svg>, label:'Pergola & Shade', sub:'Outdoor Structures' },
-              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>, label:'Turnkey Solutions', sub:'Full Project Delivery' },
-              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>, label:'Aluminum Work', sub:'Doors, Windows, Cladding' },
-              { href:'/services', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>, label:'Fencing & Gates', sub:'Security & Style' },
+              { href:'/services/exterior-renovation', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 9h20"/></svg>, label:'Exterior Renovation', sub:'Facade, Waterproofing' },
+              { href:'/services/exterior-renovation', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h20M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10"/></svg>, label:'Pool Construction', sub:'Design & Build' },
+              { href:'/services/exterior-renovation', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0 1 10 0c0 5-5 8-5 8z"/></svg>, label:'Landscaping', sub:'Gardens & Outdoor' },
+              { href:'/services/technical#electrical', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>, label:'Electrical Works', sub:'Installation & Maintenance' },
+              { href:'/services/technical#ac', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/></svg>, label:'AC & Ducting', sub:'Installation & Service' },
+              { href:'/services/technical#pergola', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7"/><path d="M9 22V12h6v10"/><line x1="3" y1="22" x2="21" y2="22"/></svg>, label:'Pergola & Shade', sub:'Outdoor Structures' },
+              { href:'/services/turnkey', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>, label:'Turnkey Solutions', sub:'Full Project Delivery' },
+              { href:'/services/technical#aluminum', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>, label:'Aluminum Work', sub:'Doors, Windows, Cladding' },
+              { href:'/services/technical#fencing', icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>, label:'Fencing & Gates', sub:'Security & Style' },
             ].map(s => (
               <a href={s.href} className="sl-card" key={s.label}>
                 <div className="sl-icon">{s.icon}</div>
@@ -881,12 +793,12 @@ export default function AboutPage() {
           <h2>Your Perfect Space is Waiting</h2>
           <p>Whether it is a dream villa renovation, a sparkling new pool, or a full office fit-out — All Care Technical Services is ready to make it happen.</p>
           <div className="banner2-btns">
-            <a href="/#contact" className="btn-white">
+            <a href="/contact" className="btn-white">
               Get Free Quote
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
             <a href="https://wa.me/971559747416" target="_blank" rel="noopener noreferrer" className="btn-outline-white">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
               WhatsApp Us
             </a>
           </div>
@@ -956,7 +868,7 @@ export default function AboutPage() {
             +971 55 974 7416
           </a>
           <a href="https://wa.me/971559747416" target="_blank" rel="noopener noreferrer" className="btn-cta-g">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
             WhatsApp Us
           </a>
         </div>
@@ -975,10 +887,18 @@ export default function AboutPage() {
             </a>
             <p>Your trusted renovation and technical services partner in Dubai. Founded 2014. Quality, integrity, and excellence on every project.</p>
             <div className="social-links">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-              <a href="https://www.instagram.com/allcaretechnical" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-              <a href="https://www.tiktok.com/@all.care.technica" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
-              <a href="https://wa.me/971559747416" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/allcaretechnical" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@all.care.technica" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="TikTok">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.78a4.85 4.85 0 0 1-1.01-.09z"/></svg>
+              </a>
+              <a href="https://wa.me/971559747416" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              </a>
             </div>
           </div>
           <div className="footer-col">
@@ -986,20 +906,19 @@ export default function AboutPage() {
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/about">About Us</a></li>
+              <li><a href="/process">Our Process</a></li>
               <li><a href="/services">All Services</a></li>
-              <li><a href="/services/interior-renovation">Interior Renovation</a></li>
-              <li><a href="/#contact">Contact</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>Services</h4>
             <ul>
               <li><a href="/services/interior-renovation">Interior Renovation</a></li>
-              <li><a href="/services">Exterior Renovation</a></li>
-              <li><a href="/services">Pool Construction</a></li>
-              <li><a href="/services">Landscaping</a></li>
-              <li><a href="/services">Electrical Works</a></li>
-              <li><a href="/services">Turnkey Solutions</a></li>
+              <li><a href="/services/exterior-renovation">Exterior Renovation</a></li>
+              <li><a href="/services/exterior-renovation">Pool & Landscape</a></li>
+              <li><a href="/services/turnkey">Turnkey Solutions</a></li>
+              <li><a href="/services/technical">Technical Services</a></li>
             </ul>
           </div>
           <div className="footer-col">
@@ -1007,8 +926,8 @@ export default function AboutPage() {
             <ul>
               <li><a href="tel:+971559747416">+971 55 974 7416</a></li>
               <li><a href="mailto:Info@allcaretechnicalservices.ae">Info@allcaretechnicalservices.ae</a></li>
-              <li><a href="https://wa.me/971559747416">WhatsApp Us</a></li>
-              <li><a href="#">Dubai, UAE</a></li>
+              <li><a href="https://wa.me/971559747416" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
+              <li><a href="/contact">Get Free Quote</a></li>
             </ul>
           </div>
         </div>
@@ -1023,7 +942,7 @@ export default function AboutPage() {
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.58 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.22a16 16 0 0 0 5.87 5.87l1.09-1.09a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 16z"/></svg>
       </a>
       <a href="https://wa.me/971559747416" className="float-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
       </a>
     </>
   );
