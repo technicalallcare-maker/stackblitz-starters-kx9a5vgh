@@ -42,7 +42,7 @@ export default function InteriorRenovationPage() {
     banner2:       '/last_one.jpg',
     villaLiving:   '/villa_living_room.jpg',
     luxuryLiving:  '/luxury_living_space.jpg',
-    modrenLiving:  '/modern_living_room.jpg',
+    modrenLiving:  '/living_room.jpg',
     lastLiving:    '/last_living_room.jpg',
     modernKitchen: '/modern_kitchen_fit_out.jpg',
     openKitchen:   '/open_plan_kitchen.jpg',
@@ -53,7 +53,7 @@ export default function InteriorRenovationPage() {
     lastBedroom:   '/last_bedroom.jpg',
     masterSuite:   '/master_en_suite.jpg',
     modernWS:      '/modern_workspace.webp',
-    lastOffice:    '/last_office.jpg',
+    lastOffice:    '/office_interior.jpg',
     lastWardrobe:  '/last_wardrobe.jpg',
     officeInt:     '/office_interior.jpg',
   };
@@ -321,22 +321,14 @@ export default function InteriorRenovationPage() {
         /* GALLERY */
         .gallery-section { background: var(--white); padding: clamp(3rem,6vw,5rem) 1.5rem; }
         .gallery-inner { max-width: 1280px; margin: 0 auto; }
-        .gallery-header { text-align: center; margin-bottom: 2rem; }
         .gallery-filter { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem; }
         .gal-btn { padding: 7px 18px; border-radius: 100px; border: 1.5px solid var(--border); background: transparent; font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer; font-family: inherit; transition: all 0.2s; }
         .gal-btn:hover { border-color: var(--green-light); color: var(--green-dark); }
         .gal-btn.active { background: var(--green-light); border-color: var(--green-light); color: #fff; font-weight: 600; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-        .gallery-item { border-radius: 12px; overflow: hidden; position: relative; aspect-ratio: 4/3; background: linear-gradient(135deg, var(--green-deeper), #4a7a18); cursor: pointer; }
-        .gallery-item:nth-child(5n+1) { grid-column: span 2; aspect-ratio: 16/9; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        .gallery-item { border-radius: 14px; overflow: hidden; position: relative; aspect-ratio: 4/3; background: linear-gradient(135deg, var(--green-deeper), #4a7a18); cursor: pointer; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; display: block; }
-        .gallery-item:hover img { transform: scale(1.06); }
-        .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; }
-        .gallery-item:hover .gallery-overlay { opacity: 1; }
-        .gallery-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; transform: translateY(8px); transition: transform 0.3s; }
-        .gallery-item:hover .gallery-info { transform: translateY(0); }
-        .gallery-info h4 { font-size: 14px; font-weight: 600; color: #fff; }
-        .gallery-info p { font-size: 12px; color: rgba(255,255,255,0.75); display: flex; align-items: center; gap: 4px; margin-top: 2px; }
+        .gallery-item:hover img { transform: scale(1.04); }
         .gallery-ph { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; color:rgba(255,255,255,0.3); }
 
         /* BANNER 2 */
@@ -457,7 +449,6 @@ export default function InteriorRenovationPage() {
           .sub-item { grid-template-columns: 1fr; gap: 1.5rem; }
           .sub-item.reverse { direction: ltr; }
           .gallery-grid { grid-template-columns: repeat(2,1fr); }
-          .gallery-item:nth-child(5n+1) { grid-column: span 1; aspect-ratio: 4/3; }
           .footer-main { grid-template-columns: 1fr 1fr; }
           .footer-brand { grid-column: 1 / -1; }
           .banner2-content { text-align: left; }
@@ -717,11 +708,6 @@ export default function InteriorRenovationPage() {
       {/* ── GALLERY — 15 real project images ── */}
       <section className="gallery-section">
         <div className="gallery-inner">
-          <div className="gallery-header">
-            <span className="section-tag">Our Work</span>
-            <h2 className="section-title">Interior Project Gallery</h2>
-            <p className="section-sub" style={{margin:'0 auto'}}>Browse our portfolio of completed interior renovation projects across Dubai.</p>
-          </div>
           <div className="gallery-filter">
             {galleryCategories.map(c => (
               <button key={c.id} className={`gal-btn ${activeGallery === c.id ? 'active' : ''}`} onClick={() => setActiveGallery(c.id)}>
@@ -736,14 +722,6 @@ export default function InteriorRenovationPage() {
                 <div className="gallery-ph" style={{display:'none'}}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                 </div>
-                <div className="gallery-overlay" />
-                <div className="gallery-info">
-                  <h4>{item.title}</h4>
-                  <p>
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    {item.location}
-                  </p>
-                </div>
               </div>
             ))}
           </div>
@@ -752,7 +730,7 @@ export default function InteriorRenovationPage() {
 
       {/* ── BANNER 2 — last one.jpg ── */}
       <div className="banner2">
-        <img src={img.banner2} alt="Luxury Interior Dubai" />
+        <img src='/last_one.jpg' alt="Luxury Interior Dubai" />
         <div className="banner2-overlay" />
         <div className="banner2-content">
           <span className="section-tag">Ready to Transform?</span>
