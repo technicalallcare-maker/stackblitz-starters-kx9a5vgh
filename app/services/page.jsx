@@ -61,42 +61,42 @@ export default function ServicesPage() {
       items: ['False Ceiling & Partitions', 'Flooring & Tiling', 'Interior Painting', 'Kitchen Fit-Out', 'Bathroom Renovation', 'Office Interior', 'Wardrobes & Cabinetry', 'Lighting Design'],
     },
     {
-      cat: 'renovation', img: '/services_11.jpg', href: '/services/exterior-renovation', badge: 'Renovation',
+      cat: 'renovation', img: '/maxresdefault_2_.jpg', href: '/services/exterior-renovation', badge: 'Renovation',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M2 9h20"/></svg>,
       title: 'Exterior Renovation', short: 'Elevate your property curb appeal and structural finish.',
       desc: 'Our exterior renovation team handles facade cladding, waterproofing, and structural upgrades — giving your property a lasting, professional finish.',
       items: ['Facade Cladding', 'Exterior Painting', 'Waterproofing', 'Roof Works', 'Structural Repairs', 'Gate & Fencing', 'Driveway Tiling', 'External Insulation'],
     },
     {
-      cat: 'renovation', img: '/services_4.jpg', href: '/services/turnkey', badge: 'Renovation',
+      cat: 'renovation', img: '/middle_section1.jpg', href: '/services/turnkey', badge: 'Renovation',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>,
       title: 'Turnkey Solutions', short: 'End-to-end project delivery from design to handover.',
       desc: 'One contract, one team, zero hassle. We manage your entire project from concept design to final handover, ensuring quality at every stage.',
       items: ['Full Project Management', 'Design & Build', 'MEP Works', 'Civil Works', 'Fit-Out & Finishing', 'Post-Handover Support', 'Villa Renovation', 'Commercial Fit-Out'],
     },
     {
-      cat: 'renovation', img: '/services_5.jpg', href: '/services/technical#waterproofing', badge: 'Renovation',
+      cat: 'renovation', img: '/orig.jpg', href: '/services/technical#waterproofing', badge: 'Renovation',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
       title: 'Waterproofing', short: 'Expert waterproofing for roofs, bathrooms, and foundations.',
       desc: 'Protect your property from water damage with our certified waterproofing solutions using premium materials that last for years.',
       items: ['Roof Waterproofing', 'Basement Waterproofing', 'Bathroom Sealing', 'Terrace Waterproofing', 'Foundation Protection', 'Tank Waterproofing', 'Pool Sealing', 'Expansion Joints'],
     },
     {
-      cat: 'renovation', img: '/services_6.jpg', href: '/services/technical', badge: 'Renovation',
+      cat: 'renovation', img: '/flooring_and_tiling.jpg', href: '/services/technical', badge: 'Renovation',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>,
       title: 'Flooring & Tiling', short: 'Premium flooring solutions for every space.',
       desc: 'From marble and porcelain to wood and vinyl — we install and finish all types of flooring with expert precision for residential and commercial spaces.',
       items: ['Marble & Granite', 'Porcelain Tiles', 'Wooden Flooring', 'Vinyl & SPC Flooring', 'Epoxy Flooring', 'Outdoor Tiles', 'Grouting & Finishing', 'Floor Polishing'],
     },
     {
-      cat: 'renovation', img: '/services_7.jpg', href: '/services/technical', badge: 'Renovation',
+      cat: 'renovation', img: '/interior_painting.jpg', href: '/services/technical', badge: 'Renovation',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 13.5V20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6.5"/><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>,
       title: 'Painting & Finishing', short: 'High-quality painting and surface finishing services.',
       desc: 'Our painting team delivers flawless finishes for interior and exterior surfaces using premium paints and the latest techniques.',
       items: ['Interior Painting', 'Exterior Painting', 'Texture Painting', 'Wallpaper Installation', 'Wood Staining', 'Anti-Mold Painting', 'Epoxy Coating', 'Decorative Finishes'],
     },
     {
-      cat: 'outdoor', img: '/services_3.jpg', href: '/services/exterior-renovation', badge: 'Outdoor',
+      cat: 'outdoor', img: '/pool_construction.jpeg', href: '/services/exterior-renovation', badge: 'Outdoor',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h20M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10"/><path d="M6 16c0 2.2 2.7 4 6 4s6-1.8 6-4"/></svg>,
       title: 'Pool Construction', short: 'Luxury pool design and construction across Dubai.',
       desc: 'From infinity pools to family swimming pools, we design and build stunning aquatic spaces that complement your home and lifestyle.',
@@ -124,35 +124,35 @@ export default function ServicesPage() {
       items: ['Garden Design', 'Turf & Grass', 'Irrigation Systems', 'Outdoor Lighting', 'Pathway Design', 'Water Features', 'Retaining Walls', 'Garden Maintenance'],
     },
     {
-      cat: 'outdoor', img: '/services_10.jpg', href: '/services/technical#fencing', badge: 'Outdoor',
+      cat: 'outdoor', img: '/pool_and_outdoor.jpg', href: '/services/technical#fencing', badge: 'Outdoor',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>,
       title: 'Fencing & Gates', short: 'Custom fencing and gate solutions.',
       desc: 'We design and install boundary fencing, automatic gates, and decorative railings that enhance security while adding to your property aesthetics.',
       items: ['Boundary Fencing', 'Automatic Gates', 'Wooden Fencing', 'Metal Railings', 'Pool Fencing', 'Security Barriers', 'Decorative Gates', 'Electric Gate Systems'],
     },
     {
-      cat: 'technical', img: '/services_2.jpg', href: '/services/technical#electrical', badge: 'Technical',
+      cat: 'technical', img: '/corporate_office.jpg', href: '/services/technical#electrical', badge: 'Technical',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>,
       title: 'Electrical Works', short: 'Certified electrical installation and maintenance.',
       desc: 'Our certified electricians handle all types of electrical works — from new installations and panel upgrades to smart home wiring and outdoor lighting.',
       items: ['Electrical Installation', 'Panel Upgrades', 'Lighting Design', 'Smart Home Wiring', 'CCTV & Security', 'Outdoor Lighting', 'Generator Connection', 'EV Charger Installation'],
     },
     {
-      cat: 'technical', img: '/services_12.jpg', href: '/services/technical#ac', badge: 'Technical',
+      cat: 'technical', img: '/modern_workspace.webp', href: '/services/technical#ac', badge: 'Technical',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>,
       title: 'AC & Ducting', short: 'Professional AC installation, maintenance, and ducting.',
       desc: 'Stay cool year-round with our AC installation, maintenance, and ducting solutions. We work with all major brands for residential and commercial spaces.',
       items: ['AC Installation', 'Duct Fabrication', 'AC Maintenance', 'Ventilation Systems', 'Chiller Systems', 'Air Quality Solutions', 'AC Repair', 'Thermostat Installation'],
     },
     {
-      cat: 'technical', img: '/services_13.jpg', href: '/services/technical#aluminum', badge: 'Technical',
+      cat: 'technical', img: '/middle_section4.jpg', href: '/services/technical#aluminum', badge: 'Technical',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>,
       title: 'Aluminum Work', short: 'Custom aluminum fabrication and installation.',
       desc: 'From aluminum doors and windows to glass facades and curtain walling — we fabricate and install custom aluminum solutions for modern buildings.',
       items: ['Aluminum Doors & Windows', 'Glass Facades', 'Curtain Walling', 'Aluminum Cladding', 'Skylights', 'Railings & Balustrades', 'Aluminum Partitions', 'Shop Fronts'],
     },
     {
-      cat: 'technical', img: '/services_14.jpg', href: '/services/technical#civil', badge: 'Technical',
+      cat: 'technical', img: '/about3.jpg', href: '/services/technical#civil', badge: 'Technical',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>,
       title: 'Civil Works', short: 'Structural and civil engineering works.',
       desc: 'Our civil works team handles foundations, blockwork, concrete structures, and all structural engineering requirements for your project.',
@@ -166,21 +166,21 @@ export default function ServicesPage() {
       items: ['Plumbing Installation', 'Drainage Systems', 'Fire Suppression', 'HVAC Systems', 'Electrical Systems', 'BMS Integration', 'Sprinkler Systems', 'Gas Works'],
     },
     {
-      cat: 'plants', img: '/services_16.jpg', href: '/services/technical#irrigation', badge: 'Plants',
+      cat: 'plants', img: '/landscaping.jpg', href: '/services/technical#irrigation', badge: 'Plants',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0 1 10 0c0 5-5 8-5 8z"/><path d="M12 12C12 12 17 9 17 4"/></svg>,
       title: 'Indoor Plants', short: 'Premium indoor plants for homes and offices.',
       desc: 'Bring nature indoors with our wide selection of premium indoor plants. We supply, install, and maintain indoor greenery for homes and offices.',
       items: ['Tropical Plants', 'Succulents & Cacti', 'Office Plants', 'Air Purifying Plants', 'Hanging Plants', 'Bonsai Trees', 'Plant Pots & Planters', 'Plant Maintenance'],
     },
     {
-      cat: 'plants', img: '/services_18.jpg', href: '/services/technical#irrigation', badge: 'Plants',
+      cat: 'plants', img: '/about1.webp', href: '/services/technical#irrigation', badge: 'Plants',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/></svg>,
       title: 'Outdoor Plants & Trees', short: 'Garden plants, trees, and shrubs for outdoor spaces.',
       desc: 'Transform your garden with our extensive range of outdoor plants, flowering shrubs, shade trees, and palms — sourced fresh and delivered to your door.',
       items: ['Palm Trees', 'Shade Trees', 'Flowering Shrubs', 'Hedge Plants', 'Fruit Trees', 'Ground Cover Plants', 'Garden Shrubs', 'Seasonal Flowers'],
     },
     {
-      cat: 'plants', img: '/services_19.jpg', href: '/services/technical#irrigation', badge: 'Plants',
+      cat: 'plants', img: '/pool5.jpg', href: '/services/technical#irrigation', badge: 'Plants',
       icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>,
       title: 'Irrigation Systems', short: 'Automated irrigation for gardens and landscapes.',
       desc: 'Keep your garden green with our smart irrigation systems — from drip lines and sprinklers to fully automated watering schedules.',
@@ -246,15 +246,15 @@ export default function ServicesPage() {
         .mob-cta { margin-top: 12px; background: var(--green-light); color: #fff !important; text-align: center; padding: 13px; border-radius: 9px; font-weight: 600; border-bottom: none !important; }
 
         /* HERO — with services_1.jpg background image */
-        .hero { position: relative; height: clamp(540px, 78vh, 820px); overflow: hidden; display: flex; align-items: center; }
+        .hero { position: relative; height: clamp(520px, 76vh, 780px); overflow: hidden; display: flex; align-items: center; }
         .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
         .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,18,5,0.88) 0%, rgba(10,18,5,0.65) 55%, rgba(10,18,5,0.35) 100%); }
         .hero-overlay2 { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.2) 100%); }
-        .hero-inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; width: 100%; padding: 0 clamp(1.5rem,6vw,6rem); }
+        .hero-inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; width: 100%; padding: 0 clamp(1.5rem,6vw,6rem); padding-bottom: 100px; }
         .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(155,193,76,0.18); border: 1px solid rgba(155,193,76,0.4); color: #c8e88a; font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 100px; margin-bottom: 1.25rem; letter-spacing: 0.07em; text-transform: uppercase; }
         .hero-dot { width: 6px; height: 6px; background: var(--green-light); border-radius: 50%; animation: pulse 2s infinite; flex-shrink: 0; }
         @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
-        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem,4.5vw,3.8rem); font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 0.85rem; max-width: 640px; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem,3.2vw,2.9rem); font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 0.85rem; max-width: 640px; }
         .hero h1 em { color: #c8e88a; font-style: normal; }
         .hero-divider { width: 50px; height: 2px; background: var(--green-light); border-radius: 2px; margin-bottom: 1rem; }
         .hero p { font-size: 15px; color: rgba(255,255,255,0.78); line-height: 1.8; margin-bottom: 2rem; max-width: 520px; }
