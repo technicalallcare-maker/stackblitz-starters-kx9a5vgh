@@ -38,7 +38,7 @@ export default function InteriorRenovationPage() {
     office:        '/corporate_office.jpg',
     wardrobes:     '/wardrobes.jpg',
     lighting:      '/lighting.jpg',
-    banner1:       '/last_section.jpg',
+    banner1:       '/villa_living_room.jpg',
     banner2:       '/last_one.jpg',
     villaLiving:   '/villa_living_room.jpg',
     luxuryLiving:  '/luxury_living_space.jpg',
@@ -305,9 +305,9 @@ export default function InteriorRenovationPage() {
         .stat-lbl { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 5px; }
 
         /* BANNER 1 */
-        .banner1 { position: relative; height: clamp(350px,50vw,580px); overflow: hidden; display: flex; align-items: center; }
-        .banner1 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-        .banner1-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(61,92,16,0.9) 0%, rgba(61,92,16,0.55) 55%, rgba(61,92,16,0.1) 100%); }
+        .banner1 { position: relative; height: clamp(420px,55vw,620px); overflow: hidden; display: flex; align-items: center; }
+        .banner1 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+        .banner1-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(20,30,10,0.82) 0%, rgba(20,30,10,0.45) 55%, rgba(20,30,10,0.05) 100%); }
         .banner1-content { position: relative; padding: 0 clamp(1.5rem,6vw,6rem); max-width: 640px; }
         .banner1-content .section-tag { color: #c8e88a; background: rgba(155,193,76,0.2); border-color: rgba(155,193,76,0.35); }
         .banner1-content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,5vw,3.6rem); font-weight: 700; color: #fff; line-height: 1.08; margin-bottom: 1rem; }
@@ -332,9 +332,9 @@ export default function InteriorRenovationPage() {
         .gallery-ph { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.5rem; color:rgba(255,255,255,0.3); }
 
         /* BANNER 2 */
-        .banner2 { position: relative; height: clamp(350px,50vw,580px); overflow: hidden; display: flex; align-items: center; justify-content: flex-end; }
-        .banner2 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-        .banner2-overlay { position: absolute; inset: 0; background: linear-gradient(to left, rgba(61,92,16,0.9) 0%, rgba(61,92,16,0.5) 55%, transparent 100%); }
+        .banner2 { position: relative; height: clamp(420px,55vw,620px); overflow: hidden; display: flex; align-items: center; justify-content: flex-end; }
+        .banner2 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+        .banner2-overlay { position: absolute; inset: 0; background: linear-gradient(to left, rgba(20,30,10,0.88) 0%, rgba(20,30,10,0.5) 50%, rgba(20,30,10,0.05) 100%); }
         .banner2-content { position: relative; padding: 0 clamp(1.5rem,6vw,6rem); max-width: 620px; text-align: right; }
         .banner2-content .section-tag { color: #c8e88a; background: rgba(155,193,76,0.2); border-color: rgba(155,193,76,0.35); }
         .banner2-content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,5vw,3.6rem); font-weight: 700; color: #fff; line-height: 1.08; margin-bottom: 1rem; }
@@ -730,7 +730,7 @@ export default function InteriorRenovationPage() {
 
       {/* ── BANNER 2 — last one.jpg ── */}
       <div className="banner2">
-        <img src='/living_room.jpg' alt="Luxury Interior Dubai" />
+        <img src='/luxury_living_space.jpg' alt="Luxury Interior Dubai" />
         <div className="banner2-overlay" />
         <div className="banner2-content">
           <span className="section-tag">Ready to Transform?</span>
