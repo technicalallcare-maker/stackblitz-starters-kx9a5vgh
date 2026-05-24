@@ -26,7 +26,7 @@ export default function InteriorRenovationPage() {
   const img = {
     hero:          '/hero_section.jpg',
     mid1:          '/middle_section1.jpg',
-    mid2:          '/middle_section3.webp',
+    mid2:          '/interior1.jpg',
     mid3:          '/middle_section4.jpg',
     mid4:          '/luxury_living_space.jpg',
     mid5:          '/middle_section5.webp',
@@ -730,7 +730,7 @@ export default function InteriorRenovationPage() {
 
       {/* ── BANNER 2 — last one.jpg ── */}
       <div className="banner2">
-        <img src='/last_one.jpg' alt="Luxury Interior Dubai" />
+        <img src='/living_room.jpg' alt="Luxury Interior Dubai" />
         <div className="banner2-overlay" />
         <div className="banner2-content">
           <span className="section-tag">Ready to Transform?</span>
