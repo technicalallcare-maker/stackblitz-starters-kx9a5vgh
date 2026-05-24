@@ -43,7 +43,7 @@ export default function AboutPage() {
     { src: '/Luxury_Interior.jpg', alt: 'Luxury Interior Dubai' },
     { src: '/pool_construction.jpeg', alt: 'Pool Construction Dubai' },
     { src: '/about2.webp', alt: 'Villa Pool Dubai' },
-    { src: '/maxresdefault_2_.jpg', alt: 'Interior Living Space' },
+    { src: '/orig.jpg', alt: 'Interior Living Space' },
     { src: '/pool_and_outdoor.jpg', alt: 'Pool and Outdoor' },
     { src: '/about3.jpg', alt: 'Outdoor Living Dubai' },
   ];
